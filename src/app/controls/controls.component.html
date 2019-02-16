@@ -1,3 +1,10 @@
-<p>
-  controls works!
-</p>
+<h2>コーヒーリストの品目リスト作成</h2>
+<form [formGroup] = "coffeeForm" novalidate>
+  <div>
+    <label>品名：<input formControlName = "name"></label>
+  </div>
+  <div>
+    <label>テイスト：<input formControlName = "taste" size = "50"></label>
+  </div>
+</form>
+<p>フォーム入力値：{{coffeeForm.value | json}}</p>
