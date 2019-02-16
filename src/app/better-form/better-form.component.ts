@@ -23,11 +23,11 @@ export class BetterFormComponent implements OnInit {
   get fieldTwo() { return this.calcForm.get('fieldTwo'); }
 
   addAnyway() {
-    let text1 = this.fieldOne.value;
-    let text2 = this.fieldTwo.value;
+    const text1 = this.fieldOne.value;
+    const text2 = this.fieldTwo.value;
     let resultStr: String = '';
 
-    if ( Number.isNaN( Number(text1)) || Number.isNaN( Number(text2))) {
+    if (Number.isNaN(Number(text1)) || Number.isNaN(Number(text2))) {
       resultStr = text1 + text2;
     } else {
       resultStr = `${text1}+${text2} = ${Number(text1) + Number(text2)}`;
