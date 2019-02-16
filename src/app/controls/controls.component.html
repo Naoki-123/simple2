@@ -11,5 +11,10 @@
       <input type="radio" formControlName="hotcold" [value]="state">{{state}}
     </span>
   </div>
+  <div>
+    <span *ngFor="let item of addssel">
+      <input type="checkbox" (change)="onCheckChanged(item, $event.target.checked)">{{item}}
+    </span>
+  </div>
 </form>
 <p>フォーム入力値：{{coffeeForm.value | json}}</p>
