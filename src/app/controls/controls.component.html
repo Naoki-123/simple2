@@ -16,5 +16,12 @@
       <input type="checkbox" (change)="onCheckChanged(item, $event.target.checked)">{{item}}
     </span>
   </div>
+  <div>
+    <label>おつまみ：
+      <select formControlName="nut">
+        <option *ngFor="let nut of nutsel" [value]="nut">{{nut}}</option>
+      </select>
+    </label>
+  </div>
 </form>
 <p>フォーム入力値：{{coffeeForm.value | json}}</p>
