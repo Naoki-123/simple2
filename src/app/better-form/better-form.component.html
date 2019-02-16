@@ -1,0 +1,14 @@
+<form [formGroup]="calcForm">
+  <input formControlName="fieldOne"
+  [class.input-invalid]='fieldOne.invalid'
+  [class.input-valid]='fieldTwo.valid'>
+   +
+  <input formControlName="fieldTwo"
+  [class.input-invalid]='fieldOne.invalid'
+  [class.input-valid]='fieldTwo.valid'>
+  <button (click)="addAnyway()" [disabled]="calcForm.invalid">CALC</button>
+  <div *ngIf="fieldOne.invalid && fieldOne.errors.required">左側のフィールドが空白です</div>
+  <div *ngIf="fieldTwo.invalid && fieldTwo.errors.required">右側のフィールドが空白です</div>
+  <div *ngIf="fieldTwo.invalid && fieldTwo.errors.maxlength">右側のフィールドの最大は5文字</div>
+</form>
+<div>{{ result }}</div>
