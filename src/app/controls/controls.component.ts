@@ -8,10 +8,12 @@ import { FormControl, FormGroup, FormBuilder } from '@angular/forms';
 })
 export class ControlsComponent implements OnInit {
   coffeeForm: FormGroup;
+  hotcoldsel = ['Hot', 'Cold'];
   constructor(private fb: FormBuilder) {
     this.coffeeForm = this.fb.group({
       name: 'ブレンド',
-      taste: 'バランスのよい口当たり'
+      taste: 'バランスのよい口当たり',
+      hotcold: this.hotcoldsel[0]
     });
    }
 

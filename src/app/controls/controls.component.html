@@ -6,5 +6,10 @@
   <div>
     <label>テイスト：<input formControlName = "taste" size = "50"></label>
   </div>
+  <div>
+    <span *ngFor="let state of hotcoldsel">
+      <input type="radio" formControlName="hotcold" [value]="state">{{state}}
+    </span>
+  </div>
 </form>
 <p>フォーム入力値：{{coffeeForm.value | json}}</p>
