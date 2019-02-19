@@ -1,0 +1,22 @@
+a{
+  padding: 10px;
+  margin-right: 4px;
+  background-color: darkolivegreen;
+  color: khaki;
+  text-decoration: none;
+}
+
+a:link, a:visited, a:hover{
+  color: khaki;
+}
+
+a.seleced-item{
+  color: darkolivegreen;
+  background-color: khaki;
+}
+
+div{
+  padding: 50px;
+  background-color: khaki;
+  color: darkolivegreen;
+}
